@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include"menu.h"
 
 double calculate_profit(double balance, double rate)
 {
@@ -9,11 +10,26 @@ double calculate_profit(double balance, double rate)
     return balance / 100 * rate;
 }
 
+
 int main(void)
 {
     double balance, total_profit = 0, credit, loan, interest, total_debt, remaining_debt, monthly_outcome = 0;
     int month;
     const double credit_card_mandatory_pay_rate = .04; 
+
+
+    do
+    {
+        char ret;
+        ;
+        if ((ret = display_menu()) == '1')
+            {
+
+            }
+        else
+            return 0;
+    } while (1);
+    
 
     printf("Asagidaki verileri sirasiyla girin:\n1-kk cekilecek borc miktari(TL)\n2-komisyon orani(%%)\n3-vade(ay)\n4-para piyasasi aylik getiri(%%)\n");
 
